@@ -12,7 +12,7 @@ widget-1:
     title: "How it works"
     url: 'getting-started/'
     text: 'How does this GitHub repo work and what can you do with the components on it.'
-    image: unsplash_9-302x182.jpg
+    image: unsplash_9-302x182.jpg 
 widget-2:
     title: "Finnovate Video"
     url: 'https://www.youtube.com/watch?v=HenZZz3bvJY&feature=youtu.be'
