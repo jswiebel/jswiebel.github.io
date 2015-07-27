@@ -1,44 +1,21 @@
 - name: YouTube
-  url: http://www.youtube.com/PhlowMedia
+  url: https://www.youtube.com/user/avokatech
   class: icon-youtube
-  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
+  title: "Videos"
 
 - name: Twitter
-  url: http://twitter.com/phlow
+  url: https://twitter.com/avokatech
   class: icon-twitter
-  title: "Immer das Neuste von Phlow gibt es auf Twitter"
+  title: "Latest news from Avoka"
 
 - name: Facebook
-  url: http://www.facebook.com/phlow.media
+  url: https://www.facebook.com/AvokaTech
   class: icon-facebook
-  title: "Lass uns Freunde sein!"
-
-- name: Soundcloud
-  url: http://soundcloud.com/phlow
-  class: icon-soundcloud
-  title: "Sounds und Downloads und mehr"
+  title: "All about Avoka"
 
 - name: GitHub
-  url: http://github.com/phlow
+  url: http://github.com/avokatech
   class: icon-github
-  title: Code und mehr...
+  title: Public repository of components
 
-- name: Instagram
-  url: http://instagram.com/phlowmedia
-  class: icon-instagram
-  title: "Bilder und Impressionen mit und ohne Filter..."
 
-- name: Pinterest
-  url: http://www.pinterest.com/phlowmedia/
-  class: icon-pinterest
-  title: "Bilder, Fotos, Illustrationen, Grafiken sammeln..."
-
-- name: Mixcloud
-  url: http://www.mixcloud.com/phlow/
-  class: icon-cloud
-  title: "Mixe, was sonst?"
-
-# - name: Xing
-#   url: https://www.xing.com/profile/Moritzmo_Sauer
-#   class: icon-xing
-#   title: Xing Profil
