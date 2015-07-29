@@ -1,6 +1,7 @@
 ---
-layout: Component
-title:  "Address lookup with sprinles"
+layout: default
+format: post
+title:  "Address lookup with sprinkles"
 subheadline:  "Works like a treat"
 teaser: "Need sugar on you address, this is the component that does it"
 categories:
@@ -10,28 +11,23 @@ tags:
     - background color
     - header
 header:
-    image: header_unsplash_2-970x.jpg
+    image: find-addresses-of-people.jpg
     background-color:  "#304558"
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
+    caption: Link to Avoka
+    caption_url: https://avoka.com/
 ---
-Do stuff and it works
+<h1>{{ page.title }}</h1>
 
-## Front Matter Code
+{{page.teaser}}
 
-<div class="alert-box radius alert">WARNING: To make this work the value of <em>background-color</em> must be inbetween quotes.</div>
+<p>
+<a href="{{ site.url }}{{ site.baseurl }}{{ page.path }}">Source for {{ page.title escape_once }} can be found here</a>
+</p>
 
-~~~
-header:
-    image:  "header_unsplash_2-970x.jpg"
-    background-color:  "#fabb00"
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
-~~~
+
+<div class="alert-box radius alert">All new address lookup component!!</div>
 
 
 
-### All Header-Styles 
-{: .t60 }
 
-{% include list-posts.html tag='header' %}
+
