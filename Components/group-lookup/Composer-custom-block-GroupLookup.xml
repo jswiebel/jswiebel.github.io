@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<module name="Block-Custom-Block-TM-GroupLookup" category="Transaction Manager" description="The autocomplete textfield that lets you lookup and pick Group configured in Transact Manager" editable="true" embeddable="true" extends="Block-Standard" label="TM Group Lookup - Autocomplete Textfield">
+    <content>
+        <field name="Group" styles="styleset.size.medium" type="Field-TextField">
+            <setproperty name="label" value="Group Name"/>
+            <setproperty name="layoutfill" value="horizontal"/>
+            <setproperty name="binding.name" value="SelectedGroup"/>
+            <setproperty name="rule.mandatory" value="always"/>
+        </field>
+        <field name="lookupGroups" type="Block-AutoSuggestionNew">
+            <setproperty name="dds.autosuggest.ref" value="../Group"/>
+            <setproperty name="dds.service.name" value="Groups Lookup"/>
+            <setproperty name="dds.autosuggest.inputref" value="../Group"/>
+            <setproperty name="dds.value.attr" value="groupName"/>
+        </field>
+    </content>
+</module>

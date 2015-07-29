@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<module name="Block-Custom-Block-TM-UserLookup" category="Transaction Manager" description="This autocomplete textfield lets you lookup and pick a User configured in Transaction Manager." editable="true" embeddable="true" extends="Block-Standard" label="TM User Lookup - Autocomplete Textfield">
+    <content>
+        <field name="User" styles="styleset.size.medium" type="Field-TextField">
+            <setproperty name="label" value="User Lookup"/>
+            <setproperty name="layoutfill" value="horizontal"/>
+            <setproperty name="binding.name" value="SelectedUser"/>
+            <setproperty name="rule.mandatory" value="always"/>
+        </field>
+        <field name="lookupUsers" type="Block-AutoSuggestionNew">
+            <setproperty name="dds.autosuggest.ref" value="../User"/>
+            <setproperty name="dds.service.name" value="Users Lookup"/>
+            <setproperty name="dds.value.attr" value="userFullName"/>
+            <setproperty name="auto.fill.block.ref" value="../selectedUserDetails"/>
+            <setproperty name="continue.message" value="Please continue typing..."/>
+        </field>
+        <field name="selectedUserDetails" type="Block-Standard">
+            <field name="userEmail" styles="styleset.size.medium" type="Field-TextField">
+                <setproperty name="label" value="Email"/>
+            </field>
+            <field name="userGivenName" styles="styleset.size.medium" type="Field-TextField">
+                <setproperty name="label" value="Given name"/>
+            </field>
+            <field name="userLastName" styles="styleset.size.medium" type="Field-TextField">
+                <setproperty name="label" value="Last name"/>
+            </field>
+            <field name="userID" styles="styleset.size.medium" type="Field-TextField">
+                <setproperty name="label" value="User Id"/>
+            </field>
+            <field name="userFullName" styles="styleset.size.medium" type="Field-TextField">
+                <setproperty name="label" value="userFullName"/>
+            </field>
+            <setproperty name="rule.visibility" value="never"/>
+        </field>
+    </content>
+</module>

@@ -1,0 +1,38 @@
+---
+layout: page
+title:  "User Lookup"
+subheadline:  "This custom block component lets you lookup the users configured in Transact Manager"
+teaser: "The client-side composer block talks to a Dynamic Data service (provided in this package) to lookup users with matching search term."
+categories:
+    - TM
+tags:
+    - TM
+	- Users
+header:
+    background-color:  "#304558"
+---
+###Name: User Lookup 
+Description: This custom block component lets you lookup the users configured in Transact Manager. The client-side composer block talks to a Dynamic Data service (provided in this package) to lookup users with matching search term.
+
+The search can be done on following fields for a given user object.
+
+- Login name
+- First/Given name
+- Last name
+- Email address
+
+
+The matching search results will be displayed in an auto-suggest text field and the user can select an entry. The selected user's details will be stored in a hidden XML node which then can be used to drive further form logic.
+
+
+## Installation Steps - ##
+1. Import the contents of 'Composer-custom-block-GroupLookup.xml' file into your composer environment. This xml file contains the custom block definition so import it against the organisation of your choice.
+2. Import the 'TM-daynamic-data-service-GroupsLookup.zip' into Service Definitions section of Transaction Manager. This zip file contains the definition of 'Users Lookup' service that the composer component will call. This service is of type 'Dynamic Data'
+
+## Develop & Test - ##
+* Once the composer and TM services are imported then open your form.
+* You'll find 'TM User Lookup - Autocomplete textfield' block under 'Transaction Manager' category in composer widget palette.
+* Drag and drop this block to your form section and deploy the form to the environment where you imported the supplied Dynamic Data service.
+* Type a value from any of the above metioned user attributes (eg. email address, first name etc)  and matching users will be shown in the auto-suggest list.
+* Select a desired user and save the form.
+* The saved form's XML will show you the user details in <SelectedUser> and <SelectedUserDetails> elements.
