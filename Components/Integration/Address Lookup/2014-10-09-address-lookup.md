@@ -1,6 +1,5 @@
 ---
 layout: default
-format: post
 title:  "Address lookup with sprinkles"
 subheadline:  "Works like a treat"
 teaser: "Need sugar on you address, this is the component that does it"
