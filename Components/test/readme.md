@@ -1,8 +1,8 @@
 ---
 layout: component
-title:  "Group Lookup"
-subheadline:  "Lookup the groups configured in Transact Manager"
-teaser: "The client-side composer block talks to a Dynamic Data service (provided in this package) to lookup groups with matching search term."
+title:  "Test"
+subheadline:  "Pick me up"
+teaser: "Does this item get picked up?"
 categories:
     - TM
 tags:

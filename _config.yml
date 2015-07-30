@@ -25,7 +25,7 @@ url: "https://jswiebel.github.io/"
 baseurl: ""
 
 
-repository_url: "https://github.com/jswiebel/jswiebel.github.io"
+repository_url: "https://github.com/jswiebel/jswiebel.github.io/tree/master/"
 
 
 # This is for the editing function in _/includes/improve_content.html
@@ -71,6 +71,8 @@ exclude:
     - Gemfile.lock
     - LICENSE
     - README.md
+
+ 
 
 
 #

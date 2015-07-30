@@ -50,7 +50,7 @@ format: blog-index
 
 {% comment %}
 *
-* First check, if there are any posts at all
+* First check, if there are any pages at all
 *
 {% endcomment %}
 
@@ -60,21 +60,23 @@ format: blog-index
     <div class="row">
 	
             {% for page in site.pages limit:10 %}
-	
+				
         <div class="medium-6 columns box">
             {% if page.tags %} 
+			
 			{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
             <h2><a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
             <p>
                 {% if page.meta_description %}{{ page.meta_description | strip_html | escape }}{% else page.teaser %}{{ page.teaser | strip_html | escape }}{% endif %}
                 <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Read {{ page.title escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a>
-            </p>
+    
+			</p>
 			{% endif %}
         </div>
             {% endfor %}
 	</div><!-- /.row -->
 
-		{% endunless %}
+{% endunless %}
 
 
 

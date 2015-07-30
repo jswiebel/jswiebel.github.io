@@ -1,17 +1,9 @@
 ---
 layout: default
-format: post
+format: page
 # Don't index these pages dear Google.
 noindex: true
 ---
-<!-- ---
-layout: default
-format: post
-#format: blog-index
-# Don't index these pages dear Google.
-noindex: true
--->
-
 
 <div class="row t30">
 	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}">
@@ -46,21 +38,16 @@ noindex: true
 				{{ page.teaser }}
 			</p>
 			{% endif %}
+			<span> 
+			<a class="radius button small" href="{{site.repository_url}}{{ page.path |replace:page.name, '' }}" title="The repo location">Repository</a>
+			
+			</span>
 
 			<span itemprop="articleSection">
 			{{ content }}
 			</span>
-
-			<p class="teaser" itemprop="description">
-				Location
-			</p>
 			
-			<span> 
-			The repository location for this component is: {{site.github}} {{site.repository_url}}
-			</span>
-			<span> 
-			The repository location for this component is: {{site.github.repository_url}}
-			</span>
+
 			
 			{% if page.show_meta == true %}
 			{% include meta_information.html %}

@@ -62,14 +62,14 @@
 #  - title: "Roadmap"
 #    url: "/roadmap/"
 
-- title: Blog
-  url: "/blog/"
+- title: Components
+  url: "/comp/"
   side: left
   dropdown:
   - title: Blog
     url: "/blog/"
-  - title: "Blog Archive"
-    url: "/blog/archive/"
+  - title: "Components Archive"
+    url: "/comp/"
 
 - title: "Search"
   url: "/search/"
