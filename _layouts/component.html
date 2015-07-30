@@ -1,20 +1,91 @@
 ---
 layout: default
 format: post
-#format: blog-index
 # Don't index these pages dear Google.
 noindex: true
 ---
-<div class="row">
-What goes here?
-	<div class="medium-8 columns t30">
-		{% include pagination.html %}
-	</div><!-- /.medium-7.columns -->
+<!-- ---
+layout: default
+format: post
+#format: blog-index
+# Don't index these pages dear Google.
+noindex: true
+-->
 
 
-	<div class="medium-4 columns t30">
+<div class="row t30">
+	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				{% if page.image.title %}
+				<figure>
+
+					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title escape_once }}" itemprop="image">
+
+					{% if page.image.caption_url && page.image.caption %}
+					<figcaption class="text-right">
+						<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+					</figcaption>
+					{% elsif page.image.caption %}
+					<figcaption class="text-right">
+						{{ page.image.caption }}
+					</figcaption>
+					{% endif %}
+				</figure>
+				{% endif %}
+
+				<span itemprop="name">
+					{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+					<h1>{{ page.title }}</h1>
+				</span>
+			</header>
+
+
+			{% if page.teaser %}
+			<p class="teaser" itemprop="description">
+				{{ page.teaser }}
+			</p>
+			{% endif %}
+
+			<span itemprop="articleSection">
+			{{ content }}
+			</span>
+
+			<p class="teaser" itemprop="description">
+				Location
+			</p>
+			
+			<span> 
+			The repository location for this component is: {{site.github}} {{site.repository_url}}
+			</span>
+			<span> 
+			The repository location for this component is: {{site.github.repository_url}}
+			</span>
+			
+			{% if page.show_meta == true %}
+			{% include meta_information.html %}
+			{% endif %}
+
+			{% if page.comments == true %}
+			{% include comments.html %}
+			{% endif %}
+
+			
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	{% if page.sidebar == "left" %}
+	<div class="medium-4 columns medium-pull-8">
 		{% include sidebar.html %}
-	</div><!-- /.medium-5.columns -->
-</div><!-- /.row --> 
+	</div><!-- /.medium-4.columns -->
+	{% endif %}
 
----
+
+	{% if page.sidebar == "right" %}
+	<div class="medium-4 columns">
+		{% include sidebar.html %}
+	</div><!-- /.medium-4.columns -->
+	{% endif %}
+</div><!-- /.row -->
