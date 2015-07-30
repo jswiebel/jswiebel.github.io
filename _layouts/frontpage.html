@@ -56,32 +56,32 @@ format: blog-index
 
 {% unless site.pages == empty %}
 
-
+		
     <div class="row">
-	
-            {% for page in site.pages limit:10 %}
-				
-        <div class="medium-6 columns box">
-            {% if page.tags %} 
-			
-			{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
-            <h2><a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-            <p>
-                {% if page.meta_description %}{{ page.meta_description | strip_html | escape }}{% else page.teaser %}{{ page.teaser | strip_html | escape }}{% endif %}
-                <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Read {{ page.title escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a>
+			{% assign counter = 0 %}
+            {% for post in site.pages limit:20 %}
+            {% if post.tags %} 
+			{% assign counter=counter | plus:1 %}
+
+			<div class="medium-6 columns box">
+				{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+				<h2><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+				<p>
+					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% else post.teaser %}{{ post.teaser | strip_html | escape }}{% endif %}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a>
     
-			</p>
+				</p>
+			</div>
+
 			{% endif %}
-        </div>
             {% endfor %}
 	</div><!-- /.row -->
-
 {% endunless %}
 
 
 
         <p><strong>{{ site.data.language.more_articles }}</strong></p>
-            {% include list-posts.html entries='0' offset='1' %}
+            {% include list-posts.html entries='0' offset='10' %}
     
 	
 
